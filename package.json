@@ -1,0 +1,23 @@
+{
+  "name": "koa-back-start",
+  "version": "1.0.0",
+  "description": "node.js  koa",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jilpung/koa-back-start.git"
+  },
+  "author": "jilpung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jilpung/koa-back-start/issues"
+  },
+  "homepage": "https://github.com/Jilpung/koa-back-start#readme",
+  "dependencies": {
+    "eslint": "^8.12.0",
+    "prettier": "^2.6.2"
+  }
+}
