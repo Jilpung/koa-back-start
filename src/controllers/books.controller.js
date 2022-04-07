@@ -62,9 +62,29 @@ exports.delete = async (ctx) => {
   ctx.status = 204;
 };
 
-exports.replace = (ctx) => {
-  ctx.body = 'replaced';
+exports.replace = async (ctx) => {
+  const { id } = ctx.params;
+
+  try {
+    await Book.findByIdAndReplace(id).exec();
+  } catch (e) {
+    if (e.name === 'CastError') {
+      ctx.status = 400;
+      return;
+    }
+  }
+  ctx.status = 204;
 };
-exports.update = (ctx) => {
-  ctx.body = 'updated';
+exports.update = async (ctx) => {
+  const { id } = ctx.params;
+
+  try {
+    await Book.findByIdAndReplace(id).exec();
+  } catch (e) {
+    if (e.name === 'CastError') {
+      ctx.status = 400;
+      return;
+    }
+  }
+  ctx.status = 204;
 };
